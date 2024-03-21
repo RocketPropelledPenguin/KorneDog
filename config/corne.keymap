@@ -31,15 +31,15 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
-// |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ' | 
-// |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
+// |  Q  |  D  |  R  |  W  |  B  |     |  J  |  F   |  U   |  P   |TAB|
+// |  A  |  S  |  H  |  T  |  G  |     |  Z  |  N   |  E   |  O   | I | 
+// |  Y  |  X  |  M  |  C  |  V  |     |  K  |  L   | ,< | .> | -_ |
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "Base";
                         bindings = <
-   AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
-   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
-   AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTL  &kp RALT  AS(DOT)
+   AS(Q) AS(D) AS(R) AS(W) AS(B)     AS(J)   AS(F)  AS(U)     AS(P)     &kp TAB
+   AS(A) AS(S) AS(H) AS(T) AS(G)     AS(Z)   AS(N)  AS(E)     AS(O)     AS(I)
+   AS(Y) AS(X) AS(M) AS(C) AS(V)     AS(K)   AS(L)  AS(DOT)  AS(DOT)  AS(MINUS)
         &kp LGUI &mo 1 &kp SPACE     AS(RET) &mo 2  &kp BSPC
                         >;
                 };

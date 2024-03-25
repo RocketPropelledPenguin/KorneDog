@@ -1,13 +1,31 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    chosen {
-        zmk,matrix_transform =&five_column_transform;
-    };
+    chosen { zmk,matrix_transform = &five_column_transform; };
 };
+
 / {
+    behaviors {
+        LEFT_SHIFT: LEFT_SHIFT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <50>;
+            hold-trigger-key-positions = <12>;
+            bindings = <&kp>;
+        };
+
+        RIGHT_SHIFT: RIGHT_SHIFT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <50>;
+            hold-trigger-key-positions = <17>;
+            bindings = <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,12 +39,29 @@
             //             | ALT | GUI | SPC |   | ENT | LWR  |  ~  |
 
             bindings = <
-&kp Q        &kp D                     &kp R                     &kp W                     &kp B                       &kp J        &kp F         &kp U                &kp P        &kp TAB
-&kp A        &kp S                     &kp H                     &kp T                     &kp G                       &kp Y        &kp N         &kp E                &kp O        &kp I      
-&gqt LBKT Z  &gqt RBKT X               &gqt LPAR M               &gqt RPAR C               &gqt LC(LA(LG(LS(N)))) V    &gqt LBRC K  &gqt RBRC L   &gqt LT COMMA        &gqt GT DOT  &kp FSLH
-                                       &kp RALT                  &kp LGUI                  &lt 1 SPACE                 &kp RET      &mo 1         &gqt LG(SEMI) TILDE
+  &kp Q  &kp D  &kp R     &kp W  &kp B        &kp J      &kp F  &kp U      &kp P    &kp TAB
+  &kp A  &kp S  &kp H     &kp T  &kp G        &kp Y      &kp N  &kp E      &kp O    &kp I
+  &kp Z  &kp X  &kp M     &kp C  &kp V        &kp K      &kp L  &kp COMMA  &kp DOT  &kp FSLH
+                &kp LGUI  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp BSPC
             >;
         };
 
+        layer_1 {
+            bindings = <
+  &trans  &kp N1  &kp N2    &kp N3  &trans       &kp LS(LPAR)  &kp LS(RPAR)  &kp UP    &trans  &trans
+  &trans  &kp N4  &kp N5    &kp N6  &trans       &kp LBKT      &kp RBKT      &trans    &trans  &trans
+  &trans  &kp N7  &kp N8    &kp N9  &kp N0       &kp LBRC      &kp RBRC      &trans    &trans  &trans
+                  &kp LGUI  &mo 1   &kp SPACE    &kp ENTER     &mo 2         &kp BSPC
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+  &kp F1  &kp F2   &kp F3    &kp F4   &trans       &trans     &trans    &kp UP    &trans     &trans
+  &kp F5  &kp F6   &kp F7    &kp F8   &trans       &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+  &kp F9  &kp F10  &kp F11   &kp F12  &trans       &trans     &trans    &trans    &trans     &trans
+                   &kp LGUI  &mo 1    &kp SPACE    &kp ENTER  &mo 2     &kp BSPC
+            >;
+        };
     };
 };

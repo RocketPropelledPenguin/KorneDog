@@ -8,69 +8,6 @@
     };
 };
 
-/ {
-    behaviors {
-        gqt: global-quick-tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GLOBAL_QUICK_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
-    macros {
-        Dda: Dda {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp D &kp D &kp A &kp SPACE>;
-            label = "DDA";
-        };
-
-        pw_1: pw_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp P &kp W &kp UNDER &kp N1>;
-            label = "PW_1";
-        };
-
-        pw_2: pw_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp P &kp W &kp UNDER &kp N2>;
-            label = "PW_2";
-        };
-
-        pw_3: pw_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp P &kp W &kp UNDER &kp N3>;
-            label = "PW_3";
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        Copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <14 15>;
-        };
-
-        Paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <15 16>;
-        };
-
-        Cut {
-            bindings = <&kp LG(X)>;
-            key-positions = <13 14>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -84,28 +21,12 @@
             //             | ALT | GUI | SPC |   | ENT | LWR  |  ~  |
 
             bindings = <
-&kp Q        &gqt LC(LA(LG(LS(D)))) D  &gqt LC(LA(LG(LS(R)))) R  &gqt LC(LA(LG(LS(W)))) W  &gqt PIPE B                 &gqt BSLH J  &gqt EQUAL F  &gqt MINUS U         &gqt PLUS P  &gqt COLON SEMI
-&gqt N1 A    &gqt N2 S                 &gqt N3 H                 &gqt N4 T                 &gqt N5 G                   &gqt N6 Y    &gqt N7 N     &gqt N8 E            &gqt N9 O    &gqt N0 I      
-&gqt LBKT Z  &gqt RBKT X               &gqt LPAR M               &gqt RPAR C               &gqt LC(LA(LG(LS(N)))) V    &gqt LBRC K  &gqt RBRC L   &gqt LT COMMA        &gqt GT DOT  &gqt QMARK FSLH
+&kp Q        &kp D                     &kp R                     &kp W                     &kp B                       &kp J        &kp F         &kp U                &kp P        &kp TAB
+&kp A        &kp S                     &kp H                     &kp T                     &kp G                       &kp Y        &kp N         &kp E                &kp O        &kp I      
+&gqt LBKT Z  &gqt RBKT X               &gqt LPAR M               &gqt RPAR C               &gqt LC(LA(LG(LS(N)))) V    &gqt LBRC K  &gqt RBRC L   &gqt LT COMMA        &gqt GT DOT  &kp FSLH
                                        &kp RALT                  &kp LGUI                  &lt 1 SPACE                 &kp RET      &mo 1         &gqt LG(SEMI) TILDE
             >;
         };
 
-        lower_layer {
-            label = "NUMBER";
-
-            // -----------------------------------------------------------------------------------------
-            // | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |      |       |       |     |
-            // | F1  | F2  | F3  | F4  | F5  |   |     | LFT  | DWN   |  UP   | RGT |
-            // | F6  | F7  | F8  | F9  | F10 |   |     | HOME | PG_DN | PG_UP | END |
-            //                   |     |     |   |     |      |       |       |
-
-            bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_VOLUME_UP  &Dda      &pw_1      &pw_2      &pw_3      
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp K_MUTE       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  
-&kp F6        &kp F7        &kp F8        &kp F9        &kp F10         &kp C_VOL_DN     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    
-                            &trans        &trans        &trans          &trans           &trans    &trans
-            >;
-        };
     };
 };

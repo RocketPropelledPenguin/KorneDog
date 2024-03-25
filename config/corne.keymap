@@ -78,16 +78,16 @@
             label = "QDRWB";
 
             // -----------------------------------------------------------------------------------------
-            // | TAB  |  Q  |  D  |  R  |  W  |  B  |   |  J  |  F   |  U  |  P  |  ;  | ESC   |
-            // | BSPC |  A  |  S  |  H  |  T  |  G  |   |  Y  |  N   |  E  |  O  |  I  |  '    |
-            // | SHFT |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  | CTRL  |
-            //                    | ALT | GUI | SPC |   | ENT | LWR  |  ~  |
+            // |  Q  |  D  |  R  |  W  |  B  |   |  J  |  F   |  U  |  P  |  ;  |
+            // |  A  |  S  |  H  |  T  |  G  |   |  Y  |  N   |  E  |  O  |  I  |
+            // |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  |
+            //             | ALT | GUI | SPC |   | ENT | LWR  |  ~  |
 
             bindings = <
-&gqt LS(TAB) TAB  &kp Q        &gqt LC(LA(LG(LS(D)))) D  &gqt LC(LA(LG(LS(R)))) R  &gqt LC(LA(LG(LS(W)))) W  &gqt PIPE B                 &gqt BSLH J  &gqt EQUAL F  &gqt MINUS U         &gqt PLUS P  &gqt COLON SEMI  &kp ESC
-&gqt DEL BSPC     &gqt N1 A    &gqt N2 S                 &gqt N3 H                 &gqt N4 T                 &gqt N5 G                   &gqt N6 Y    &gqt N7 N     &gqt N8 E            &gqt N9 O    &gqt N0 I        &gqt GRAVE SQT
-&kp LSHFT         &gqt LBKT Z  &gqt RBKT X               &gqt LPAR M               &gqt RPAR C               &gqt LC(LA(LG(LS(N)))) V    &gqt LBRC K  &gqt RBRC L   &gqt LT COMMA        &gqt GT DOT  &gqt QMARK FSLH  &kp RCTRL
-                                                         &kp RALT                  &kp LGUI                  &lt 1 SPACE                 &kp RET      &mo 1         &gqt LG(SEMI) TILDE
+&kp Q        &gqt LC(LA(LG(LS(D)))) D  &gqt LC(LA(LG(LS(R)))) R  &gqt LC(LA(LG(LS(W)))) W  &gqt PIPE B                 &gqt BSLH J  &gqt EQUAL F  &gqt MINUS U         &gqt PLUS P  &gqt COLON SEMI
+&gqt N1 A    &gqt N2 S                 &gqt N3 H                 &gqt N4 T                 &gqt N5 G                   &gqt N6 Y    &gqt N7 N     &gqt N8 E            &gqt N9 O    &gqt N0 I      
+&gqt LBKT Z  &gqt RBKT X               &gqt LPAR M               &gqt RPAR C               &gqt LC(LA(LG(LS(N)))) V    &gqt LBRC K  &gqt RBRC L   &gqt LT COMMA        &gqt GT DOT  &gqt QMARK FSLH
+                                       &kp RALT                  &kp LGUI                  &lt 1 SPACE                 &kp RET      &mo 1         &gqt LG(SEMI) TILDE
             >;
         };
 
@@ -95,16 +95,16 @@
             label = "NUMBER";
 
             // -----------------------------------------------------------------------------------------
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |      |       |       |     |      |
-            // |      | F1  | F2  | F3  | F4  | F5  |   |     | LFT  | DWN   |  UP   | RGT |      |
-            // |      | F6  | F7  | F8  | F9  | F10 |   |     | HOME | PG_DN | PG_UP | END |      |
-            //                    |     |     |     |   |     |      |       |
+            // | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |      |       |       |     |
+            // | F1  | F2  | F3  | F4  | F5  |   |     | LFT  | DWN   |  UP   | RGT |
+            // | F6  | F7  | F8  | F9  | F10 |   |     | HOME | PG_DN | PG_UP | END |
+            //                   |     |     |   |     |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_VOLUME_UP  &Dda      &pw_1      &pw_2      &pw_3      &trans
-&trans      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp K_MUTE       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans      &kp F6        &kp F7        &kp F8        &kp F9        &kp F10         &kp C_VOL_DN     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
-                                        &trans        &trans        &trans          &trans           &trans    &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_VOLUME_UP  &Dda      &pw_1      &pw_2      &pw_3      
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp K_MUTE       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  
+&kp F6        &kp F7        &kp F8        &kp F9        &kp F10         &kp C_VOL_DN     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    
+                            &trans        &trans        &trans          &trans           &trans    &trans
             >;
         };
     };

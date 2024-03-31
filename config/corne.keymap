@@ -27,14 +27,11 @@
     };
 
     behaviors {
-        pht: positional_hold_tap {
+        hrm: home_row_mods {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1>;  
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>
         };
 
     keymap {
@@ -51,7 +48,7 @@
 
             bindings = <
   &kp Q  &kp D               &kp R             &kp W           &kp B        &kp J      &kp F            &kp U              &kp P                &kp TAB
-  &kp A  &mt LEFT_CONTROL S  &mt LEFT_SHIFT H  &mt LEFT_ALT T  &kp G        &kp Y      &mt RIGHT_ALT N  &mt RIGHT_SHIFT E  &mt RIGHT_CONTROL O  &kp I
+  &kp A  &hrm LEFT_CONTROL S  &hrm LEFT_SHIFT H  &hrm LEFT_ALT T  &kp G        &kp Y      &hrm RIGHT_ALT N  &hrm RIGHT_SHIFT E  &hrm RIGHT_CONTROL O  &kp I
   &kp Z  &kp X               &kp M             &kp C           &kp V        &kp K      &kp L            &kp COMMA          &kp DOT              &kp FSLH
                              &kp LGUI          &mo 1           &kp SPACE    &kp ENTER  &mo 2            &kp BSPC
             >;

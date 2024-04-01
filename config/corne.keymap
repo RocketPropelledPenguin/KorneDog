@@ -31,7 +31,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>
+            bindings = <&kp>, <&kp>;
         };
 
     keymap {

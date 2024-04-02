@@ -24,6 +24,16 @@
             bindings = <&kp MINUS>;
             key-positions = <11 20>;
         };
+
+        altF4 { 
+            bindings = <&kp LA(F4)>;
+            key-positions = <0 4>;
+        };
+
+        save { 
+        bindings = <&kp LS(S)>;
+        key-positions = <10 14>;
+        };
     };
 
     behaviors {
@@ -33,6 +43,27 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
+        };
+        
+        td_oe: tap_dance_oe {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp P>, <&kp SEMI>,;
+        };
+        
+        td_ue: tap_dance_ue {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp U>, <&kp LBKT>, ;
+        };
+        
+        td_ae: tap_dance_ae {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp F>, <&kp SQT>, ;
         };
 
     keymap {
@@ -45,7 +76,7 @@
             // |  Q  |  D  |  R  |  W  |  B  |   |  J  |  F   |  U  |  P  |  ;  |
             // |  A  |  S  |  H  |  T  |  G  |   |  Y  |  N   |  E  |  O  |  I  |
             // |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  |
-            //             | ALT | GUI | SPC |   | ENT | LWR  |  ~  |
+            //             | GUI | EXT | SPC |   | ENT | CON  |  ~  |
 
             bindings = <
   &kp Q  &kp D               &kp R             &kp W           &kp B        &kp J      &kp F            &kp U              &kp P                &kp TAB
@@ -57,9 +88,9 @@
 
         exten {
             bindings = <
-  &kp LEFT_BRACKET      &kp N1  &kp N2    &kp N3  &kp SLASH       &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp RA(Q)          &trans
-  &kp LS(LEFT_BRACKET)  &kp N4  &kp N5    &kp N6  &kp LS(FSLH)    &kp RA(N8)  &kp RA(N9)  &kp LS(MINUS)    &kp PERCENT        &kp BACKSLASH
-  &kp LS(KP_EQUAL)      &kp N7  &kp N8    &kp N9  &kp N0          &kp RA(N7)  &kp RA(N0)  &kp LS(SQT)      &kp LS(AMPERSAND)  &kp RA(MINUS)
+  &kp LS(EQUAL)         &kp N1  &kp N2    &kp N3  &kp SLASH       &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp RA(Q)          &trans
+  &kp LS(RIGHT_BRACKET) &kp N4  &kp N5    &kp N6  &kp LS(N7)    &kp RA(N8)  &kp RA(N9)  &kp LS(MINUS)    &kp PERCENT        &kp BACKSLASH
+  &kp LS(N0)      &kp N7  &kp N8    &kp N9  &kp N0          &kp RA(N7)  &kp RA(N0)  &kp LS(N2)      &kp LS(AMPERSAND)  &kp RA(MINUS)
                                 &kp LGUI  &mo 1   &kp SPACE       &kp ENTER   &mo 2       &kp BSPC
             >;
         };

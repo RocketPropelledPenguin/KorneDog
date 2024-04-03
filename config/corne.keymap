@@ -31,7 +31,7 @@
         };
 
         save { 
-        bindings = <&kp LS(S)>;
+        bindings = <&kp LC(S)>;
         key-positions = <10 14>;
         };
     };
@@ -88,9 +88,9 @@
 
         exten {
             bindings = <
-  &kp LS(EQUAL)         &kp N1  &kp N2    &kp N3  &kp SLASH       &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp RA(Q)          &trans
+  &kp RIGHT_BRACKET     &kp N1  &kp N2    &kp N3  &kp SLASH       &kp LS(N8)  &kp LS(N9)  &kp EXCLAMATION  &kp RA(Q)          &trans
   &kp LS(RIGHT_BRACKET) &kp N4  &kp N5    &kp N6  &kp LS(N7)      &kp RA(N8)  &kp RA(N9)  &kp LS(MINUS)    &kp PERCENT        &kp BACKSLASH
-  &kp LS(N0)            &kp N7  &kp N8    &kp N9  &kp N0          &kp RA(N7)  &kp RA(N0)  &kp LS(N2)      &kp LS(AMPERSAND)  &kp RA(MINUS)
+  &kp LS(N0)            &kp N7  &kp N8    &kp N9  &kp N0          &kp RA(N7)  &kp RA(N0)  &kp LS(N2)       &kp LS(N6)         &kp RA(MINUS)
                                 &kp LGUI  &mo 1   &kp SPACE       &kp ENTER   &mo 2       &kp BSPC
             >;
         };

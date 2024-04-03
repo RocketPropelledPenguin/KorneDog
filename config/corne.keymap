@@ -98,9 +98,9 @@
 
         contr {
             bindings = <
-  &trans  &kp RA(Q)         &kp LS(N4)      &kp LS(N3)        &trans           &kp INS        &kp HOME        &kp UP        &kp END    &kp PAGE_UP
+  &trans  &kp RA(E)         &kp LS(N4)      &kp LS(N3)        &trans           &kp INS        &kp HOME        &kp UP        &kp END    &kp PAGE_UP
   &trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT      &kp C_AC_UNDO    &kp DELETE     &kp LEFT        &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
-  &trans  &kp C_AC_CUT      &kp C_AC_COPY   &kp C_AC_INSERT   &kp C_AC_REDO    &kp LS(BSLH)   &kp BSLH        &kp RA(BSLH)  &kp GRAVE  &kp EQUAL
+  &trans  &kp C_AC_CUT      &kp C_AC_COPY   &kp C_AC_INSERT   &kp C_AC_REDO    &kp LS(NUBS)   &kp NUBS        &kp RA(NUBS)  &kp GRAVE  &kp EQUAL
                             &kp LGUI        &mo 1             &kp SPACE        &kp ENTER      &mo 2           &kp BSPC
             >;
         };

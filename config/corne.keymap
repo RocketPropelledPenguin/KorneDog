@@ -98,9 +98,9 @@
 
         contr {
             bindings = <
-  &kp GRAVE  &kp RA(E)         &kp LS(N4)      &kp LS(N3)        &kp LS(F)          &kp INS        &kp HOME        &kp UP        &kp END       &trans
-  &kp EQUAL  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT      &kp LS(Z)          &kp DELETE     &kp LEFT        &kp DOWN      &kp RIGHT     &kp PAGE_UP
-  &kp LS(A)  &kp LS(X)         &kp LS(C)       &kp LS(V)         &kp LS(Y)          &kp NUBS       &kp LS(NUBS)    &kp RA(NUBS)  &kp RA(SLASH) &kp PAGE_DOWN
+  &kp GRAVE  &kp RA(E)         &kp LS(N4)      &kp LS(N3)        &kp LC(F)          &kp INS        &kp HOME        &kp UP        &kp END                &trans
+  &kp EQUAL  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT      &kp LC(Z)          &kp DELETE     &kp LEFT        &kp DOWN      &kp RIGHT              &kp PAGE_UP
+  &kp LC(A)  &kp LC(X)         &kp LC(C)       &kp LC(V)         &kp LC(Y)          &kp NUBS       &kp LS(NUBS)    &kp RA(NUBS)  &kp RA(RIGHT_BRACKET)  &kp PAGE_DOWN
                                &kp LGUI        &mo 1             &kp SPACE          &kp ENTER      &mo 2           &kp BSPC
             >;
         };

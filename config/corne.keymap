@@ -98,19 +98,19 @@
 
         contr {
             bindings = <
-  &trans  &kp RA(E)         &kp LS(N4)      &kp LS(N3)        &trans           &kp INS        &kp HOME        &kp UP        &kp END    &kp PAGE_UP
-  &trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT      &kp C_AC_UNDO    &kp DELETE     &kp LEFT        &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
-  &trans  &kp C_AC_CUT      &kp C_AC_COPY   &kp C_AC_INSERT   &kp C_AC_REDO    &kp NUBS       &kp LS(NUBS)        &kp RA(NUBS)  &kp GRAVE  &kp EQUAL
-                            &kp LGUI        &mo 1             &kp SPACE        &kp ENTER      &mo 2           &kp BSPC
+  &kp GRAVE  &kp RA(E)         &kp LS(N4)      &kp LS(N3)        &kp LS(F)          &kp INS        &kp HOME        &kp UP        &kp END       &trans
+  &kp EQUAL  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT      &kp LS(Z)          &kp DELETE     &kp LEFT        &kp DOWN      &kp RIGHT     &kp PAGE_UP
+  &kp LS(A)  &kp LS(X)         &kp LS(C)       &kp LS(V)         &kp LS(Y)          &kp NUBS       &kp LS(NUBS)    &kp RA(NUBS)  &kp RA(SLASH) &kp PAGE_DOWN
+                               &kp LGUI        &mo 1             &kp SPACE          &kp ENTER      &mo 2           &kp BSPC
             >;
         };
 
         func {
             bindings = <
-  &kp F1  &kp F2   &kp F3    &kp F4   &kp C_AC_FIND     &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2      &bt BT_SEL 3        &bt BT_SEL 4
-  &kp F5  &kp F6   &kp F7    &kp F8   &kp LEFT_SHIFT    &kp LS(C_VOL_UP)  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &kp PAGE_DOWN
-  &kp F9  &kp F10  &kp F11   &kp F12  &bt BT_CLR        &kp C_VOL_DN      &kp C_REWIND    &kp C_MUTE        &kp C_FAST_FORWARD  &kp LS(NUMBER_4)
-                   &kp LGUI  &mo 1    &kp SPACE         &kp ENTER         &mo 2           &kp BSPC
+  &kp F1  &kp F2   &kp F3    &kp F4   &kp C_AC_FIND          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2      &bt BT_SEL 3        &bt BT_SEL 4
+  &kp F5  &kp F6   &kp F7    &kp F8   &kp LEFT_SHIFT         &kp LS(C_VOL_UP)  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &kp PAGE_DOWN
+  &kp F9  &kp F10  &kp F11   &kp F12  &bt BT_CLR             &kp C_VOL_DN      &kp C_REWIND    &kp C_MUTE        &kp C_FAST_FORWARD  &kp LS(NUMBER_4)
+                   &kp LGUI  &mo 1    &kp SPACE              &kp ENTER         &mo 2           &kp BSPC
             >;
         };
     };
